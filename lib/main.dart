@@ -78,9 +78,9 @@ class MyHomePage extends StatelessWidget {
                             ),
                           )
                         : CircleAvatar(
-                          radius: 50,
-                          backgroundColor: Colors.white,
-                          child: CircleAvatar(
+                            radius: 50,
+                            backgroundColor: Colors.white,
+                            child: CircleAvatar(
                               radius: 45,
                               child: ClipOval(
                                 child: GestureDetector(
@@ -93,12 +93,13 @@ class MyHomePage extends StatelessWidget {
                                 ),
                               ),
                             ),
-                        ),
+                          ),
                   ),
-                  Text(
-                    _storyGroupsController.getUsername(index),
-                      style: const TextStyle(fontFamily: 'AveriaLibre', fontSize: 18, color: Colors.black)
-                  ),
+                  Text(_storyGroupsController.getUsername(index),
+                      style: const TextStyle(
+                          fontFamily: 'AveriaLibre',
+                          fontSize: 18,
+                          color: Colors.black)),
                 ],
               );
             }),
@@ -106,82 +107,3 @@ class MyHomePage extends StatelessWidget {
     );
   }
 }
-
-/*
-* ListView(
-          scrollDirection: Axis.horizontal,
-          children: [
-            Column(
-              children: [
-                Container(
-                  margin: EdgeInsets.all(8),
-                  padding: EdgeInsets.fromLTRB(0, 4, 7, 0),
-                  child: CircleAvatar(
-                    radius: 50,
-                    backgroundColor: Theme.of(context).colorScheme.primary,
-                    child: CircleAvatar(
-                        radius: 45,
-                        child: ClipOval(
-                          child: GestureDetector(
-                            onTap: (){
-                              //Get.to(StoryScreenOne());
-                            },
-                            child: Image.network(_storyGroupsController.getProfilePic(0)),
-                          ),
-                        )
-                    ),
-                  ),
-                ),
-                Text(_storyGroupsController.getUsername(0), style: TextStyle(fontFamily: 'AveriaLibre', fontSize: 18, color: Colors.black))
-              ],
-            ),
-            Column(
-              children: [
-                Container(
-                  margin: EdgeInsets.all(8),
-                  padding: EdgeInsets.fromLTRB(0, 4, 7, 0),
-                  child: CircleAvatar(
-                    radius: 50,
-                    backgroundColor: Theme.of(context).colorScheme.primary,
-                    child: CircleAvatar(
-                        radius: 45,
-                        child: ClipOval(
-                          child: GestureDetector(
-                            onTap: (){
-                              Get.to(StoryScreenTwo());
-                            },
-                            child: Image.network(_storyGroupsController.getProfilePic(1)),
-                          ),
-                        )
-                    ),
-                  ),
-                ),
-                Text(_storyGroupsController.getUsername(1), style: TextStyle(fontFamily: 'AveriaLibre', fontSize: 18, color: Colors.black))
-              ],
-            ),
-            Column(
-              children: [
-                Container(
-                  margin: EdgeInsets.all(8),
-                  padding: EdgeInsets.fromLTRB(0, 4, 7, 0),
-                  child: CircleAvatar(
-                    radius: 50,
-                    backgroundColor: Theme.of(context).colorScheme.primary,
-                    child: CircleAvatar(
-                        radius: 45,
-                        child: ClipOval(
-                          child: GestureDetector(
-                            onTap: (){
-                              Get.to(StoryScreenThree());
-                            },
-                            child: Image.network(_storyGroupsController.getProfilePic(2)),
-                          ),
-                        )
-                    ),
-                  ),
-                ),
-                Text(_storyGroupsController.getUsername(2), style: TextStyle(fontFamily: 'AveriaLibre', fontSize: 18, color: Colors.black))
-              ],
-            ),
-          ],
-        ),*/
